@@ -5,12 +5,6 @@
         }
     ],
     "env": {
-        "CSCART_CACHE_BACKEND": {
-            "value": "apcu"
-        },
-        "CSCART_FS_ADAPTER": {
-            "value": "pdo"
-        },
         "QUEUE_DRIVER": {
             "value": "redis"
         }
