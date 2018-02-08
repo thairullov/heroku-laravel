@@ -1,0 +1,37 @@
+{
+    "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-php"
+        }
+    ],
+    "env": {
+        "CSCART_CACHE_BACKEND": {
+            "value": "apcu"
+        },
+        "CSCART_FS_ADAPTER": {
+            "value": "pdo"
+        },
+        "QUEUE_DRIVER": {
+            "value": "redis"
+        }
+    },
+    "addons": [
+        {
+            "plan": "heroku-postgresql:hobby-basic",
+            "options": {
+                "version": "9.6"
+            }
+        },
+        "heroku-redis"
+    ],
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "hobby"
+        },
+        "worker": {
+            "quantity": 1,
+            "size": "hobby"
+        }
+    }
+}
